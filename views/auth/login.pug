@@ -1,0 +1,19 @@
+extends ../layout/index
+block contenido 
+    .py-10
+        h1.text-4xl.my10.font-extrabold.text-center Bienes
+            span.font-normal Raices
+        h2.text-center.text-2xl.font-extrabold= pagina
+        .mt-8.mx-auto.max-w-md
+            .bg-white.py-8.px-4.shadow.rounded-md
+                form.space-y-5
+                    div 
+                        label.block.text-sm.uppercase.text-gray-700.mb3.font-bold(for="correo") Correo
+                        input#correo.lowercase.w-full.px-3.py-2.border.border-black.rounded-md.placeholder-gray-400(placeholder="Introduzca su correo" type="email" name="correo")
+                    div 
+                        label.block.text-sm.uppercase.text-gray-700.mb3.font-bold(for="password") Password
+                        input#password.w-full.px-3.py-2.border.border-black.rounded-md.placeholder-gray-400(placeholder="Introduzca su password" type="password" name="password")
+                    .flex.items-center.justify-between 
+                        a.text-gray-500.text-xs(href="/auth/registro") Crear cuenta
+                        a.text-gray-500.text-xs(href="/auth/olvide-password") Recuperar clave                      
+                    input(class="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 cursor-pointer" type="submit" value="Registrar")
